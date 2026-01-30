@@ -28,9 +28,9 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up delay-100">
-            First Class Travel,
+            The Invisible Engine of
             <br />
-            <span className="text-gradient-gold">35-45% Less.</span>
+            <span className="text-gradient-gold">Premium Travel.</span>
           </h1>
 
           {/* Subheadline */}
