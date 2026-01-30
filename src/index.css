@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -116,23 +116,24 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
   }
 }
 
 @layer components {
   .font-serif {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
   }
 
   .font-sans {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
 
   .text-gradient-gold {
