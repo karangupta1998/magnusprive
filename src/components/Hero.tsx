@@ -48,7 +48,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="xl" 
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold"
             >
               Learn More
             </Button>

@@ -18,8 +18,8 @@ const Routes = () => {
           <span className="text-sm font-medium text-gold uppercase tracking-widest mb-4 block">
             Popular Routes
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-            US ↔ Europe Sectors
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6">
+            US ↔ Europe
           </h2>
           <p className="text-muted-foreground text-lg">
             Premium cabin savings on the most sought-after transatlantic routes.
