@@ -10,8 +10,8 @@ const Header = () => {
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <Plane className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-serif text-xl font-medium text-foreground tracking-tight">
-              Velaire
+            <span className="font-serif text-xl font-medium text-foreground tracking-wide">
+              Magnus
             </span>
           </div>
 

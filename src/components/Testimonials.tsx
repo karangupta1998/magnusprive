@@ -2,13 +2,13 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Velaire saved us over $12,000 on our executive team's London trip. The service was impeccable from start to finish.",
+    quote: "Magnus saved us over $12,000 on our executive team's London trip. The service was impeccable from start to finish.",
     author: "Sarah Mitchell",
     title: "VP of Operations",
     company: "Apex Ventures",
   },
   {
-    quote: "As a touring manager, I need reliable last-minute bookings. Velaire delivers every time with rates I can't find anywhere else.",
+    quote: "As a touring manager, I need reliable last-minute bookings. Magnus delivers every time with rates I can't find anywhere else.",
     author: "Marcus Chen",
     title: "Tour Manager",
     company: "Atlantic Artists",
