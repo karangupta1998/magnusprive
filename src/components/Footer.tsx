@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center">
               <Plane className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-serif text-xl font-medium text-primary-foreground tracking-wide">
-              Magnus
+            <span className="font-serif text-xl text-primary-foreground tracking-wide">
+              Magnus <span className="font-light italic">Privé</span>
             </span>
           </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Magnus. All rights reserved.
+            © {new Date().getFullYear()} Magnus Privé. All rights reserved.
           </p>
         </div>
       </div>
