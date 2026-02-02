@@ -1,22 +1,22 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
+import WhatWeOffer from "@/components/WhatWeOffer";
 import Routes from "@/components/Routes";
 import Testimonials from "@/components/Testimonials";
-import Stats from "@/components/Stats";
-import Contact from "@/components/Contact";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <Hero />
       <HowItWorks />
+      <WhatWeOffer />
       <Routes />
       <Testimonials />
-      <Stats />
-      <Contact />
+      <FinalCTA />
       <Footer />
     </div>
   );
