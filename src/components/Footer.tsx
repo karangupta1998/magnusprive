@@ -1,36 +1,29 @@
-import { Plane } from "lucide-react";
-
 const Footer = () => {
   return (
-    <footer className="py-12 bg-primary">
+    <footer className="py-10 bg-background border-t border-border/30">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-              <Plane className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-serif text-xl text-primary-foreground tracking-wide">
-              Magnus <span className="font-light italic">Privé</span>
-            </span>
-          </div>
+          {/* Brand */}
+          <span className="font-serif text-lg text-foreground tracking-wide">
+            Magnus <span className="font-light italic">Privé</span>
+          </span>
 
           {/* Links */}
           <nav className="flex items-center gap-8">
-            <a href="#how-it-works" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-              How It Works
-            </a>
-            <a href="#routes" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-              Routes
-            </a>
-            <a href="#contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+            <a href="#contact" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">
               Contact
+            </a>
+            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider">
+              Terms
             </a>
           </nav>
 
           {/* Copyright */}
-          <p className="text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Magnus Privé. All rights reserved.
+          <p className="text-xs text-muted-foreground/50">
+            © {new Date().getFullYear()} Magnus Privé
           </p>
         </div>
       </div>
