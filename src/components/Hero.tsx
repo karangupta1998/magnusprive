@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroCabin from "@/assets/hero-cabin.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroCabin} 
-          alt="Luxury first class cabin interior" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroCabin} alt="Luxury first class cabin interior" className="w-full h-full object-cover" />
         {/* Left-side gradient overlay only */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/20" />
       </div>
@@ -24,29 +18,19 @@ const Hero = () => {
           </h1>
 
           {/* Tagline */}
-          <p className="font-serif text-xl md:text-2xl text-gold font-light italic mb-8 animate-fade-up delay-100">
-            The Invisible Engine of Premium Travel
-          </p>
+          <p className="font-serif text-xl md:text-2xl text-gold font-light italic mb-8 animate-fade-up delay-100">The Invisible Engine of Premium Travel</p>
 
           {/* Subtext */}
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg animate-fade-up delay-200">
-            Exclusive access to Business & First Class flights and luxury hotels.
-          </p>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg animate-fade-up delay-200">Exclusive access to Business & First Class flights and Luxury Hotels.</p>
 
           {/* CTA */}
           <div className="animate-fade-up delay-300">
-            <Button 
-              variant="outline" 
-              size="xl" 
-              className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm"
-            >
+            <Button variant="outline" size="xl" className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm">
               Request a Quote
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
