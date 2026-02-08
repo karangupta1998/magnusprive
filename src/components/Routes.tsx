@@ -1,82 +1,61 @@
 import { ArrowRight } from "lucide-react";
 
 const routes = [
-  { 
-    from: "New York", 
-    to: "London", 
-    type: "Business Class",
-    price: "$2,450",
-    retail: "$4,100"
-  },
-  { 
-    from: "Los Angeles", 
-    to: "Paris", 
-    type: "Business Class",
-    price: "$2,980",
-    retail: "$4,800"
-  },
-  { 
-    from: "Chicago", 
-    to: "Frankfurt", 
-    type: "Business Class",
-    price: "$2,600",
-    retail: "$4,300"
-  },
-  { 
-    from: "San Francisco", 
-    to: "Zurich", 
-    type: "First Class",
-    price: "$5,900",
-    retail: "$9,200"
-  },
+  { from: "New York (JFK)", to: "London (LHR)", savings: "Up to 42%" },
+  { from: "Los Angeles (LAX)", to: "Paris (CDG)", savings: "Up to 38%" },
+  { from: "Miami (MIA)", to: "Frankfurt (FRA)", savings: "Up to 45%" },
+  { from: "Chicago (ORD)", to: "Amsterdam (AMS)", savings: "Up to 40%" },
+  { from: "San Francisco (SFO)", to: "Zurich (ZRH)", savings: "Up to 37%" },
+  { from: "Boston (BOS)", to: "Milan (MXP)", savings: "Up to 43%" },
 ];
 
 const Routes = () => {
   return (
-    <section id="routes" className="py-24 bg-secondary">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section id="routes" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="max-w-2xl mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-            Key Routes & Sample Deals
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-sm font-medium text-gold uppercase tracking-widest mb-4 block">
+            Popular Routes
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6">
+            US ↔ Europe
           </h2>
-          <p className="text-muted-foreground">US ↔ EU</p>
-          <div className="w-12 h-px bg-accent/50 mt-4" />
+          <p className="text-muted-foreground text-lg">
+            Premium cabin savings on the most sought-after transatlantic routes.
+          </p>
         </div>
 
         {/* Routes Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {routes.map((route, index) => (
             <div 
               key={index}
-              className="group p-6 bg-card border border-border hover:border-accent/30 transition-colors duration-300"
+              className="group relative bg-card rounded-xl p-6 border border-border hover:border-gold/30 hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
-              {/* Route */}
-              <div className="flex items-center gap-3 mb-4">
-                <span className="font-serif text-xl text-foreground">{route.from}</span>
-                <ArrowRight className="w-4 h-4 text-accent/60" />
-                <span className="font-serif text-xl text-foreground">{route.to}</span>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <span className="font-medium text-foreground">{route.from}</span>
+                  <ArrowRight className="w-4 h-4 text-gold" />
+                  <span className="font-medium text-foreground">{route.to}</span>
+                </div>
               </div>
-              
-              {/* Type */}
-              <p className="text-sm text-muted-foreground mb-4">{route.type}</p>
-              
-              {/* Pricing */}
-              <div className="flex items-baseline gap-4">
-                <span className="text-2xl font-sans font-medium text-accent">
-                  from {route.price}
-                </span>
-                <span className="text-sm text-muted-foreground">
-                  Typical retail: {route.retail}
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Business & First Class</span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-semibold">
+                  {route.savings}
                 </span>
               </div>
+              
+              {/* Hover Effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </div>
           ))}
         </div>
 
-        {/* Disclaimer */}
-        <p className="text-center text-sm text-muted-foreground/70 mt-10">
-          Sample fares shown for illustration purposes only.
+        {/* Note */}
+        <p className="text-center text-sm text-muted-foreground mt-10">
+          *Savings vary based on travel dates, booking window, and availability. Contact us for a personalized quote.
         </p>
       </div>
     </section>

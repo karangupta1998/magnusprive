@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Cormorant Garamond', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Raleway', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,12 +53,15 @@ export default {
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
-          muted: "hsl(var(--gold-muted))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
         },
         navy: {
-          DEFAULT: "hsl(var(--navy-deep))",
-          secondary: "hsl(var(--navy-secondary))",
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
         },
+        ivory: "hsl(var(--ivory))",
+        cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -85,7 +88,7 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
+          from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
