@@ -18,6 +18,11 @@ const Hero = () => {
           <p className="font-serif text-2xl md:text-3xl text-foreground/90 mb-6 animate-fade-up tracking-wide">Magnus Privé<span className="italic font-light">Privé</span>
           </p>
 
+          {/* Primary Tagline */}
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.15] mb-8 animate-fade-up delay-100">The Invisible Engine of
+Premium Travel<br />
+            Premium Travel.
+          </h1>
 
           {/* Secondary Line */}
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-12 max-w-xl animate-fade-up delay-200">Exclusive Access to Business & First Class Flights and Luxury Hotels</p>
