@@ -14,6 +14,9 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-32">
         <div className="max-w-2xl">
+          {/* Brand Name */}
+          <p className="font-serif text-2xl md:text-3xl text-foreground/90 mb-6 animate-fade-up tracking-wide">Magnus Privé<span className="italic font-light">Privé</span>
+          </p>
 
 
           {/* Secondary Line */}
