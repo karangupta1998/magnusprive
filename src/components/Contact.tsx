@@ -53,7 +53,10 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...result.data,
+          first_name: result.data.first_name,
+          last_name: result.data.last_name,
+          email: result.data.email,
+          travel_details: result.data.travel_details,
           date: new Date().toISOString().split("T")[0],
         }),
       });
