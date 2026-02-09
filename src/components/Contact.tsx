@@ -9,7 +9,7 @@ const formSchema = z.object({
   first_name: z.string().trim().min(1, "First name is required").max(100),
   last_name: z.string().trim().min(1, "Last name is required").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
-  details: z.string().trim().min(1, "Travel details are required").max(5000),
+  travel_details: z.string().trim().min(1, "Travel details are required").max(5000),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -19,7 +19,7 @@ const Contact = () => {
     first_name: "",
     last_name: "",
     email: "",
-    details: "",
+    travel_details: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -54,7 +54,7 @@ const Contact = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...result.data,
-          date: new Date().toISOString(),
+          date: new Date().toISOString().split("T")[0],
         }),
       });
 
@@ -166,12 +166,12 @@ const Contact = () => {
                   <label className="block text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Travel Details</label>
                   <textarea
                     rows={4}
-                    value={formData.details}
-                    onChange={(e) => handleChange("details", e.target.value)}
+                    value={formData.travel_details}
+                    onChange={(e) => handleChange("travel_details", e.target.value)}
                     className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors resize-none"
                     placeholder="Tell us your route, dates, and class of service..."
                   />
-                  {errors.details && <p className="text-destructive text-xs mt-1">{errors.details}</p>}
+                  {errors.travel_details && <p className="text-destructive text-xs mt-1">{errors.travel_details}</p>}
                 </div>
                 <Button
                   type="submit"
