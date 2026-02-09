@@ -46,6 +46,13 @@ const Contact = () => {
       return;
     }
 
+    console.log("RAW DATA FROM FORM:", result.data);
+
+    // FALLBACK STRATEGY: Try every possible name for the text area
+    const capturedText = result.data.travel_details || (result.data as Record<string, unknown>).details || (result.data as Record<string, unknown>).message || (result.data as Record<string, unknown>).travelDetails || (result.data as Record<string, unknown>).about || (result.data as Record<string, unknown>).additionalInfo || "";
+
+    console.log("FINAL TEXT BEING SENT:", capturedText);
+
     setStatus("loading");
 
     try {
@@ -53,10 +60,10 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          first_name: result.data.first_name,
-          last_name: result.data.last_name,
+          first_name: result.data.first_name || (result.data as Record<string, unknown>).firstName,
+          last_name: result.data.last_name || (result.data as Record<string, unknown>).lastName,
           email: result.data.email,
-          travel_details: result.data.travel_details,
+          travel_details: capturedText,
           date: new Date().toISOString().split("T")[0],
         }),
       });
@@ -66,7 +73,8 @@ const Contact = () => {
       } else {
         setStatus("error");
       }
-    } catch {
+    } catch (error) {
+      console.error("Submission Failed:", error);
       setStatus("error");
     }
   };
