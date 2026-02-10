@@ -3,8 +3,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-serif text-xl text-foreground tracking-wide">Magnus Privé<span className="font-light italic">Privé</span>
-          </a>
+          
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-10">
