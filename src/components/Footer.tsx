@@ -1,6 +1,5 @@
 const Footer = () => {
-  return (
-    <footer className="py-10 bg-background border-t border-border/30">
+  return <footer className="py-10 bg-background border-t border-border/30">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
@@ -27,8 +26,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

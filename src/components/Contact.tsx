@@ -2,72 +2,68 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { z } from "zod";
-
 const WEBHOOK_URL = "https://hook.us2.make.com/7vylmpgq8g29mmhrcv9bgp6ag2w3cu9e";
-
 const formSchema = z.object({
   first_name: z.string().trim().min(1, "First name is required").max(100),
   last_name: z.string().trim().min(1, "Last name is required").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
-  travel_details: z.string().trim().min(1, "Travel details are required").max(5000),
+  travel_details: z.string().trim().min(1, "Travel details are required").max(5000)
 });
-
 type FormData = z.infer<typeof formSchema>;
-
 const Contact = () => {
   const [formData, setFormData] = useState<FormData>({
     first_name: "",
     last_name: "",
     email: "",
-    travel_details: "",
+    travel_details: ""
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
   const handleChange = (field: keyof FormData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
     if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
+      setErrors(prev => ({
+        ...prev,
+        [field]: undefined
+      }));
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
-
     const result = formSchema.safeParse(formData);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof FormData, string>> = {};
-      result.error.errors.forEach((err) => {
+      result.error.errors.forEach(err => {
         const field = err.path[0] as keyof FormData;
         fieldErrors[field] = err.message;
       });
       setErrors(fieldErrors);
       return;
     }
-
     console.log("RAW DATA FROM FORM:", result.data);
 
     // FALLBACK STRATEGY: Try every possible name for the text area
     const capturedText = result.data.travel_details || (result.data as Record<string, unknown>).details || (result.data as Record<string, unknown>).message || (result.data as Record<string, unknown>).travelDetails || (result.data as Record<string, unknown>).about || (result.data as Record<string, unknown>).additionalInfo || "";
-
     console.log("FINAL TEXT BEING SENT:", capturedText);
-
     setStatus("loading");
-
     try {
       const response = await fetch(WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify({
           first_name: result.data.first_name || (result.data as Record<string, unknown>).firstName,
           last_name: result.data.last_name || (result.data as Record<string, unknown>).lastName,
           email: result.data.email,
           travel_details: capturedText,
-          date: new Date().toISOString().split("T")[0],
-        }),
+          date: new Date().toISOString().split("T")[0]
+        })
       });
-
       if (response.ok) {
         setStatus("success");
       } else {
@@ -78,9 +74,7 @@ const Contact = () => {
       setStatus("error");
     }
   };
-
-  return (
-    <section id="contact" className="py-28 bg-secondary">
+  return <section id="contact" className="py-28 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-5xl mx-auto">
           {/* Left Content */}
@@ -97,7 +91,7 @@ const Contact = () => {
             <div className="space-y-5">
               <a href="mailto:access@magnusprive.com" className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="w-4 h-4 text-gold" strokeWidth={1.5} />
-                <span className="text-sm">access@magnusprive.com</span>
+                <span className="text-sm">concierge@magnusprive.com</span>
               </a>
               <div className="flex items-center gap-4 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-gold" strokeWidth={1.5} />
@@ -108,16 +102,13 @@ const Contact = () => {
 
           {/* Right Form / Status */}
           <div className="bg-card border border-border rounded-lg p-8">
-            {status === "success" ? (
-              <div className="flex flex-col items-center justify-center text-center py-12 space-y-5">
+            {status === "success" ? <div className="flex flex-col items-center justify-center text-center py-12 space-y-5">
                 <CheckCircle className="w-10 h-10 text-gold" strokeWidth={1.5} />
                 <h3 className="font-serif text-xl text-foreground">Request Received</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
                   A Private Client Director is reviewing your itinerary and will contact you shortly.
                 </p>
-              </div>
-            ) : status === "error" ? (
-              <div className="flex flex-col items-center justify-center text-center py-12 space-y-5">
+              </div> : status === "error" ? <div className="flex flex-col items-center justify-center text-center py-12 space-y-5">
                 <AlertCircle className="w-10 h-10 text-destructive" strokeWidth={1.5} />
                 <h3 className="font-serif text-xl text-foreground">Connection Error</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
@@ -127,89 +118,45 @@ const Contact = () => {
                   </a>{" "}
                   directly.
                 </p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-gold/50 text-gold hover:bg-gold/10 mt-2"
-                  onClick={() => setStatus("idle")}
-                >
+                <Button variant="outline" size="sm" className="border-gold/50 text-gold hover:bg-gold/10 mt-2" onClick={() => setStatus("idle")}>
                   Try Again
                 </Button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              </div> : <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">First Name</label>
-                    <input
-                      type="text"
-                      value={formData.first_name}
-                      onChange={(e) => handleChange("first_name", e.target.value)}
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors"
-                      placeholder="John"
-                    />
+                    <input type="text" value={formData.first_name} onChange={e => handleChange("first_name", e.target.value)} className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors" placeholder="John" />
                     {errors.first_name && <p className="text-destructive text-xs mt-1">{errors.first_name}</p>}
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Last Name</label>
-                    <input
-                      type="text"
-                      value={formData.last_name}
-                      onChange={(e) => handleChange("last_name", e.target.value)}
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors"
-                      placeholder="Doe"
-                    />
+                    <input type="text" value={formData.last_name} onChange={e => handleChange("last_name", e.target.value)} className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors" placeholder="Doe" />
                     {errors.last_name && <p className="text-destructive text-xs mt-1">{errors.last_name}</p>}
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Email</label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors"
-                    placeholder="john@company.com"
-                  />
+                  <input type="email" value={formData.email} onChange={e => handleChange("email", e.target.value)} className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors" placeholder="john@company.com" />
                   {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Travel Details</label>
-                  <textarea
-                    rows={4}
-                    value={formData.travel_details}
-                    onChange={(e) => handleChange("travel_details", e.target.value)}
-                    className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors resize-none"
-                    placeholder="Tell us your route, dates, and class of service..."
-                  />
+                  <textarea rows={4} value={formData.travel_details} onChange={e => handleChange("travel_details", e.target.value)} className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors resize-none" placeholder="Tell us your route, dates, and class of service..." />
                   {errors.travel_details && <p className="text-destructive text-xs mt-1">{errors.travel_details}</p>}
                 </div>
-                <Button
-                  type="submit"
-                  variant="outline"
-                  size="lg"
-                  disabled={status === "loading"}
-                  className="w-full border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-xs"
-                >
-                  {status === "loading" ? (
-                    <>
+                <Button type="submit" variant="outline" size="lg" disabled={status === "loading"} className="w-full border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-xs">
+                  {status === "loading" ? <>
                       <Loader2 className="w-4 h-4 animate-spin" />
                       Sending...
-                    </>
-                  ) : (
-                    "Submit Request"
-                  )}
+                    </> : "Submit Request"}
                 </Button>
                 <p className="text-xs text-muted-foreground/60 text-center">
                   Your information is kept strictly confidential.
                 </p>
-              </form>
-            )}
+              </form>}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
