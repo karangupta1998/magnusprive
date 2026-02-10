@@ -9,7 +9,7 @@ const steps = [
   {
     icon: Briefcase,
     title: "Curated Premium Options",
-    description: "Business Class, First Class, and luxury hotels only.",
+    description: "Business Class, First Class, and Luxury Hotels only.",
   },
   {
     icon: Clock,
