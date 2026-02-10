@@ -25,9 +25,11 @@ const Hero = () => {
 
           {/* CTA */}
           <div className="animate-fade-up delay-300">
-            <Button variant="outline" size="xl" className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm">
-              Request a Quote
-            </Button>
+            <a href="#contact">
+              <Button variant="outline" size="xl" className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm">
+                Request a Quote
+              </Button>
+            </a>
           </div>
         </div>
       </div>
