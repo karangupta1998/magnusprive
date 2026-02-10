@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <span className="font-serif text-lg text-foreground tracking-wide">
-            Magnus <span className="font-light italic">Privé</span>
+            Magnus Privé
           </span>
 
           {/* Links */}
