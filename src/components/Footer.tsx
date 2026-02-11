@@ -15,7 +15,7 @@ const Footer = () => {
             <a href="/privacy-policy" className="text-xs text-muted-foreground hover:text-gold transition-colors uppercase tracking-wider">
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-gold transition-colors uppercase tracking-wider">
+            <a href="/terms" className="text-xs text-muted-foreground hover:text-gold transition-colors uppercase tracking-wider">
               Terms
             </a>
           </nav>
