@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
 
             {/* Section 1 */}
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-foreground">1. Information We Collect</h2>
+              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">1. Information We Collect</h2>
               <p>To provide our bespoke services, we may collect the following categories of data:</p>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Identity Data:</strong> Names, dates of birth, passport details, and government-issued IDs for you and your travel companions.</li>
@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-foreground">2. How We Use Your Information</h2>
+              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">2. How We Use Your Information</h2>
               <p>We use your data solely to execute the services you request:</p>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Fulfillment:</strong> To book flights, hotels, private jets, and concierge services.</li>
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
 
             {/* Section 3 */}
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-foreground">3. Disclosure of Your Information</h2>
+              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">3. Disclosure of Your Information</h2>
               <p>We do not sell your data. However, to execute your travel arrangements, we must share specific data with trusted third parties:</p>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Service Providers:</strong> Airlines, hotels, transport companies, and ground handlers who require your details to fulfill your booking.</li>
@@ -54,13 +54,13 @@ const PrivacyPolicy = () => {
 
             {/* Section 4 */}
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-foreground">4. Data Security</h2>
+              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">4. Data Security</h2>
               <p>We implement strict security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. Access to your personal data is limited to those employees, agents, and partners who have a strictly business need to know.</p>
             </section>
 
             {/* Section 5 */}
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-foreground">5. Your Legal Rights</h2>
+              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">5. Your Legal Rights</h2>
               <p>Depending on your jurisdiction, you have the right to request access to your personal data, request correction of your data, or request erasure of your data. To exercise these rights, please contact our concierge team.</p>
             </section>
           </div>
