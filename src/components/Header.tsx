@@ -9,13 +9,13 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            <a href="#how-it-works" className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest">
+            <a href="#how-it-works" className="text-xs font-medium text-muted-foreground hover:text-gold transition-colors uppercase tracking-widest">
               How It Works
             </a>
-            <a href="#routes" className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest">
+            <a href="#routes" className="text-xs font-medium text-muted-foreground hover:text-gold transition-colors uppercase tracking-widest">
               Routes
             </a>
-            <a href="#contact" className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest">
+            <a href="#contact" className="text-xs font-medium text-muted-foreground hover:text-gold transition-colors uppercase tracking-widest">
               Contact
             </a>
           </nav>
