@@ -32,7 +32,7 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="text-center">
-              <p className="text-foreground/80 leading-relaxed mb-6 italic font-serif text-lg">
+              <p className="text-foreground/80 leading-relaxed mb-6 italic font-sans text-base">
                 "{testimonial.quote}"
               </p>
               <div className="text-sm text-muted-foreground">

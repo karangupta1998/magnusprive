@@ -89,7 +89,7 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="space-y-5">
-              <a href="mailto:access@magnusprive.com" className="flex items-center gap-4 text-muted-foreground hover:text-gold transition-colors">
+              <a href="mailto:concierge@magnusprive.com" className="flex items-center gap-4 text-muted-foreground hover:text-gold transition-colors">
                 <Mail className="w-4 h-4 text-gold" strokeWidth={1.5} />
                 <span className="text-sm">concierge@magnusprive.com</span>
               </a>
