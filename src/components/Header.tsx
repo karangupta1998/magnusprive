@@ -3,7 +3,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-serif text-lg text-foreground tracking-wide hover:text-gold transition-colors">
+          <a href="/" className="font-serif text-lg text-foreground tracking-wide hover:text-gold transition-colors">
             Magnus Privé
           </a>
 

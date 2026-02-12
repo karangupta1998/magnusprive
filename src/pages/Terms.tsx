@@ -21,7 +21,7 @@ const Terms = () => {
 
             {/* Section 1 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">1. Our Role as an Agent</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">1. Our Role as an Agent</h2>
               <p>Magnus Privé acts solely as an intermediary agent between you (the "Client") and third-party service providers (the "Suppliers"), including but not limited to airlines, private jet operators, hotels, transport companies, and tour operators.</p>
               <ul className="space-y-3 list-none pl-0">
                 <li>We do not own or operate the aircraft, hotels, or vehicles used in your itinerary.</li>
@@ -31,7 +31,7 @@ const Terms = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">2. Bookings &amp; Payments</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">2. Bookings &amp; Payments</h2>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Deposits:</strong> A non-refundable deposit may be required to secure bespoke itineraries or initiate research for complex requests.</li>
                 <li><strong className="text-foreground">Full Payment:</strong> Full payment is required by the due date stated on your invoice. Failure to pay by the deadline may result in the cancellation of your booking by the Supplier.</li>
@@ -41,7 +41,7 @@ const Terms = () => {
 
             {/* Section 3 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">3. Cancellations &amp; Refunds</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">3. Cancellations &amp; Refunds</h2>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Client Cancellation:</strong> If you cancel a booking, you will be subject to the cancellation terms of the specific Supplier (airline/hotel), plus a Magnus Privé administrative service fee.</li>
                 <li><strong className="text-foreground">Supplier Cancellation:</strong> If a Supplier cancels your reservation (e.g., flight cancellation), we will advocate on your behalf to secure a refund or alternative, but we are not financially liable for the Supplier's failure to provide service.</li>
@@ -50,7 +50,7 @@ const Terms = () => {
 
             {/* Section 4 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">4. Travel Documents &amp; Health</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">4. Travel Documents &amp; Health</h2>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Client Responsibility:</strong> It is the sole responsibility of the Client to ensure they possess valid passports (with at least 6 months validity), visas, and health certificates (e.g., vaccinations) required for all destinations.</li>
                 <li><strong className="text-foreground">Liability:</strong> Magnus Privé cannot be held liable if you are refused entry to a country or denied boarding due to incorrect or missing documentation.</li>
@@ -59,13 +59,13 @@ const Terms = () => {
 
             {/* Section 5 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">5. Private Aviation (If Applicable)</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">5. Private Aviation (If Applicable)</h2>
               <p>For private charter bookings, Magnus Privé acts as a broker. The contract of carriage is strictly between the Client and the Aircraft Operator. We are not an air carrier.</p>
             </section>
 
             {/* Section 6 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">6. Limitation of Liability</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">6. Limitation of Liability</h2>
               <p>To the maximum extent permitted by law, Magnus Privé shall not be liable for any direct, indirect, special, or consequential damages arising out of:</p>
               <ul className="space-y-3 list-none pl-0">
                 <li><strong className="text-foreground">Missed flights</strong> or connections.</li>
@@ -77,7 +77,7 @@ const Terms = () => {
 
             {/* Section 7 */}
             <section className="space-y-4">
-              <h2 className="font-serif font-semibold text-2xl text-foreground tracking-tight">7. Governing Law</h2>
+              <h2 className="font-sans font-semibold text-2xl text-foreground tracking-tight">7. Governing Law</h2>
               <p>These Terms shall be governed by and construed in accordance with the laws of NY, USA. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts in NYC, NY.</p>
             </section>
           </div>
