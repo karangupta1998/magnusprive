@@ -71,9 +71,15 @@ const EngagementProtocol = () => {
               size="xl"
               className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm"
             >
-              Initiate Request via WhatsApp
+              Quick Request via WhatsApp
             </Button>
           </a>
+          <p className="text-xs text-muted-foreground/50 mt-4">
+            For immediate assistance. For detailed itineraries,{" "}
+            <a href="#contact" className="text-gold/60 hover:text-gold underline underline-offset-2 transition-colors">
+              request a quote below
+            </a>.
+          </p>
         </div>
       </div>
     </section>
