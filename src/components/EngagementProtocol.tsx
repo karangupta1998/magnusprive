@@ -24,7 +24,7 @@ const steps = [
 
 const EngagementProtocol = () => {
   return (
-    <section className="py-28 bg-gradient-to-b from-secondary to-background">
+    <section className="py-28 bg-gradient-to-b from-secondary to-background" id="engagement-protocol">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-20">
@@ -74,12 +74,6 @@ const EngagementProtocol = () => {
               Quick Request via WhatsApp
             </Button>
           </a>
-          <p className="text-xs text-muted-foreground/50 mt-4">
-            For immediate assistance. For detailed itineraries,{" "}
-            <a href="#contact" className="text-gold/60 hover:text-gold underline underline-offset-2 transition-colors">
-              request a quote below
-            </a>.
-          </p>
         </div>
       </div>
     </section>
