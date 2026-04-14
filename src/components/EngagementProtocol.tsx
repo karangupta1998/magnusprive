@@ -1,5 +1,6 @@
 import { MessageCircle, ShieldCheck, PlaneTakeoff } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import FadeUp from "./FadeUp";
 
 const steps = [
   {
@@ -26,41 +27,35 @@ const EngagementProtocol = () => {
   return (
     <section className="py-20 bg-secondary" id="engagement-protocol">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-14">
+        <FadeUp className="text-center max-w-xl mx-auto mb-14">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
             The Engagement Protocol
           </h2>
           <div className="w-12 h-px bg-gold/40 mx-auto" />
-        </div>
+        </FadeUp>
 
-        {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
           {steps.map((step, index) => (
-            <div
-              key={step.title}
-              className="relative rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm p-8 text-center transition-all duration-300 hover:border-gold/30 hover:shadow-gold-glow"
-            >
-              {/* Step number */}
-              <span className="absolute top-4 right-4 font-sans text-xs text-muted-foreground/40 tracking-widest">
-                0{index + 1}
-              </span>
-
-              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6">
-                <step.icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
+            <FadeUp key={step.title} delay={index * 0.12}>
+              <div className="relative rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm p-8 text-center transition-all duration-500 hover:border-gold/30 hover:shadow-gold-glow h-full">
+                <span className="absolute top-4 right-4 font-sans text-xs text-muted-foreground/40 tracking-widest">
+                  0{index + 1}
+                </span>
+                <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6">
+                  <step.icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-xl text-foreground mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-              <h3 className="font-serif text-xl text-foreground mb-3">
-                {step.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
-            </div>
+            </FadeUp>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
+        <FadeUp delay={0.3} className="text-center">
           <a
             href="https://wa.me/918950358000?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20premium%20travel%20arrangements%20through%20Magnus%20Priv%C3%A9."
             target="_blank"
@@ -69,12 +64,12 @@ const EngagementProtocol = () => {
             <Button
               variant="outline"
               size="xl"
-              className="border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm"
+              className="btn-shimmer border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm"
             >
               Quick Request via WhatsApp
             </Button>
           </a>
-        </div>
+        </FadeUp>
       </div>
     </section>
   );

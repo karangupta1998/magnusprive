@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import StatsBar from "@/components/StatsBar";
+import WhatWeOffer from "@/components/WhatWeOffer";
 import HowItWorks from "@/components/HowItWorks";
 import EngagementProtocol from "@/components/EngagementProtocol";
-import WhatWeOffer from "@/components/WhatWeOffer";
 import Routes from "@/components/Routes";
 import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <StatsBar />
       <WhatWeOffer />
       <HowItWorks />
       <EngagementProtocol />
