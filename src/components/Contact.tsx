@@ -140,7 +140,7 @@ const Contact = () => {
                   <textarea rows={4} value={formData.travel_details} onChange={e => handleChange("travel_details", e.target.value)} className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-gold/40 focus:border-gold/40 transition-colors resize-none" placeholder="Tell us your route, dates, and class of service..." />
                   {errors.travel_details && <p className="text-destructive text-xs mt-1">{errors.travel_details}</p>}
                 </div>
-                <Button type="submit" variant="outline" size="lg" disabled={status === "loading"} className="w-full border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-xs">
+                <Button type="submit" variant="outline" size="lg" disabled={status === "loading"} className="btn-shimmer w-full border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-xs">
                   {status === "loading" ? <>
                       <Loader2 className="w-4 h-4 animate-spin" />
                       Sending...
