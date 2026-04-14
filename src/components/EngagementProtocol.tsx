@@ -24,7 +24,7 @@ const steps = [
 
 const EngagementProtocol = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-secondary to-background" id="engagement-protocol">
+    <section className="py-20 bg-secondary" id="engagement-protocol">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-14">
@@ -62,7 +62,7 @@ const EngagementProtocol = () => {
         {/* CTA */}
         <div className="text-center">
           <a
-            href="https://wa.me/"
+            href="https://wa.me/918950358000?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20premium%20travel%20arrangements%20through%20Magnus%20Priv%C3%A9."
             target="_blank"
             rel="noopener noreferrer"
           >
