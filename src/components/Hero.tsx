@@ -6,11 +6,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroCabin}
-          alt="Luxury first class cabin interior"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroCabin} alt="Luxury first class cabin interior" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/20" />
       </div>
 
@@ -21,17 +17,17 @@ const Hero = () => {
             Magnus Privé
           </h1>
 
-          <p className="font-serif text-xl md:text-2xl text-gold/80 font-light mb-12 animate-fade-up delay-100">
+          <p className="font-serif text-xl md:text-2xl text-gold font-light italic mb-8 animate-fade-up delay-100">
             The Invisible Engine of Premium Travel
+          </p>
+
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg animate-fade-up delay-200">
+            Exclusive access to Business & First Class flights and Luxury Hotels.
           </p>
 
           <div className="animate-fade-up delay-300">
             <a href="#contact">
-              <Button
-                variant="outline"
-                size="xl"
-                className="btn-shimmer border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm"
-              >
+              <Button variant="outline" size="xl" className="btn-shimmer border-gold/50 text-gold hover:bg-gold/10 hover:text-gold-light hover:border-gold tracking-wider uppercase text-sm">
                 Request a Quote
               </Button>
             </a>
