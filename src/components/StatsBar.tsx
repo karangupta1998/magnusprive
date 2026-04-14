@@ -10,14 +10,14 @@ const StatsBar = () => {
             <div className="text-center">
               <p className="text-gradient-gold mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
                 <span className="text-base font-normal">Up to </span>
-                <span className="text-3xl md:text-4xl font-normal">65%</span>
+                <span className="text-2xl md:text-3xl font-normal">65%</span>
               </p>
               <p className="text-xs text-muted-foreground uppercase tracking-widest">Savings on retail fares</p>
             </div>
 
             <div className="text-center">
               <p className="text-gradient-gold mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
-                <span className="text-3xl md:text-4xl font-normal">24</span>
+                <span className="text-2xl md:text-3xl font-normal">24</span>
                 <span className="text-base font-normal">hr</span>
               </p>
               <p className="text-xs text-muted-foreground uppercase tracking-widest">Response guarantee</p>
@@ -25,14 +25,14 @@ const StatsBar = () => {
 
             <div className="text-center">
               <p className="text-gradient-gold mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
-                <span className="text-3xl md:text-4xl font-normal">100%</span>
+                <span className="text-2xl md:text-3xl font-normal">100%</span>
               </p>
               <p className="text-xs text-muted-foreground uppercase tracking-widest">Verified bookings</p>
             </div>
 
             <div className="text-center">
               <p className="text-gradient-gold mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
-                <span className="text-3xl md:text-4xl font-normal">US ↔ EU</span>
+                <span className="text-2xl md:text-3xl font-normal">US ↔ EU</span>
               </p>
               <p className="text-xs text-muted-foreground uppercase tracking-widest">Transatlantic routes</p>
             </div>
