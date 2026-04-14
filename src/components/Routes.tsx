@@ -35,13 +35,13 @@ const Routes = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <span className="text-xs font-medium text-gold bg-gold/10 border border-gold/20 rounded px-2 py-1 tracking-wide">
-                    −{route.saving}%
-                  </span>
                   <div className="text-right">
                     <span className="text-gold font-semibold text-lg">{route.price}</span>
                     <span className="text-xs text-muted-foreground ml-3 line-through">{route.retail}</span>
                   </div>
+                  <span className="text-xs font-medium text-gold bg-gold/10 border border-gold/20 rounded px-2 py-1 tracking-wide">
+                    −{route.saving}%
+                  </span>
                 </div>
               </div>
             </FadeUp>
