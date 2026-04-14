@@ -17,20 +17,12 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-32">
         <div className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold/70 mb-6 animate-fade-in">
-            Premium Travel Concierge
-          </p>
-
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6 animate-fade-up">
             Magnus Privé
           </h1>
 
-          <p className="font-serif text-xl md:text-2xl text-gold/80 font-light mb-6 animate-fade-up delay-100">
+          <p className="font-serif text-xl md:text-2xl text-gold/80 font-light mb-12 animate-fade-up delay-100">
             The Invisible Engine of Premium Travel
-          </p>
-
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-lg animate-fade-up delay-200">
-            We source Business & First Class flights and Luxury Hotels at prices your travel agent cannot access — then verify every booking before you pay.
           </p>
 
           <div className="animate-fade-up delay-300">
