@@ -9,10 +9,10 @@ const routes = [
 
 const Routes = () => {
   return (
-    <section id="routes" className="py-28 bg-secondary">
+    <section id="routes" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-20">
+        <div className="text-center max-w-xl mx-auto mb-14">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
             Key Routes & Sample Deals
           </h2>
