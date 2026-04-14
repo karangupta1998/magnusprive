@@ -44,11 +44,7 @@ const Contact = () => {
       setErrors(fieldErrors);
       return;
     }
-    console.log("RAW DATA FROM FORM:", result.data);
-
-    // FALLBACK STRATEGY: Try every possible name for the text area
-    const capturedText = result.data.travel_details || (result.data as Record<string, unknown>).details || (result.data as Record<string, unknown>).message || (result.data as Record<string, unknown>).travelDetails || (result.data as Record<string, unknown>).about || (result.data as Record<string, unknown>).additionalInfo || "";
-    console.log("FINAL TEXT BEING SENT:", capturedText);
+    const capturedText = result.data.travel_details;
     setStatus("loading");
     try {
       const response = await fetch(WEBHOOK_URL, {
