@@ -18,7 +18,7 @@ const Routes = () => {
           </h2>
           <div className="w-12 h-px bg-gold/40 mx-auto mb-6" />
           <p className="text-sm text-muted-foreground">
-            US ↔ Europe — Premium cabin savings on the most sought-after transatlantic routes.
+            Premium cabin savings on the most sought-after transatlantic routes.
           </p>
         </FadeUp>
 
