@@ -74,7 +74,7 @@ const Contact = () => {
       setStatus("error");
     }
   };
-  return <section id="contact" className="py-28 bg-secondary">
+  return <section id="contact" className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-5xl mx-auto">
           {/* Left Content */}

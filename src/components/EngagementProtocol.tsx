@@ -24,10 +24,10 @@ const steps = [
 
 const EngagementProtocol = () => {
   return (
-    <section className="py-28 bg-gradient-to-b from-secondary to-background" id="engagement-protocol">
+    <section className="py-20 bg-gradient-to-b from-secondary to-background" id="engagement-protocol">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-20">
+        <div className="text-center max-w-xl mx-auto mb-14">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
             The Engagement Protocol
           </h2>

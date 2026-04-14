@@ -18,10 +18,10 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-28 bg-secondary">
+    <section className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-20">
+        <div className="text-center max-w-xl mx-auto mb-14">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
             What Our Clients Say
           </h2>

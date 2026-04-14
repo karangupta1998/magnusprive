@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const FinalCTA = () => {
   return (
-    <section className="py-32 bg-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
